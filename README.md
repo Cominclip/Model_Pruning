@@ -17,7 +17,7 @@ python pretrain.py --dir_data 'data/cifar-10-python.tar.gz' --save 'parameters/m
 Next you need to prune the model:
 
 ```shell
-python vggprune.py --dir_data 'data/cifar-10-python.tar.gz' --model 'parameters/main/model_best.pth.tar' --save 'parameters/prune/' --ratio 0.9
+python prune.py --dir_data 'data/cifar-10-python.tar.gz' --model 'parameters/main/model_best.pth.tar' --save 'parameters/prune/' --ratio 0.9
 ```
 
 You can change `ratio `  to get different pruned model.
@@ -25,7 +25,7 @@ You can change `ratio `  to get different pruned model.
 Finally you should fine tune the pruned model:
 
 ```shell
-python main_finetune.py --dir_data 'data/cifar-10-python.tar.gz' --refine 'parameters/prune/pruned_layer8_0.9.pth.tar' --save 'parameters/finetune/' --ratio 0.9
+python finetune.py --dir_data 'data/cifar-10-python.tar.gz' --refine 'parameters/prune/pruned_layer8_0.9.pth.tar' --save 'parameters/finetune/' --ratio 0.9
 ```
 
 After completing the above steps, we can get the parameters of the pre-trained, pruned and fine-tuned model respectively.
