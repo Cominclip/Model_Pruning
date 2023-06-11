@@ -1,0 +1,1 @@
+You need to place the CIFAR10 dataset in this folder.
