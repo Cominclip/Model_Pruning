@@ -3,6 +3,8 @@
 Algorithm reproduction of：Learning Efficient Convolutional Networks through Network Slimming (CVPR2017)
 
 
+![](./assets/prune.pdf)
+
 ## Preparation
 
 ### Data
